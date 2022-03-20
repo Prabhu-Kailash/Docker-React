@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t kailash/Docker-React -f Dockerfile.dev .
+  - docker build -t kailash/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run kailash/Docker-React -e "CI=true" npm test
+  - docker run kailash/docker-react -e "CI=true" npm test
